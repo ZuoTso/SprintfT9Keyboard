@@ -4,7 +4,7 @@
 #define BUFFER_LEN 1024
 #define LINE_LEN 128
 
-void convert(char *arr[], int count) {
+void convert(char *arr[],const int count) {
     const char *alp[] =
             {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     char num_arr[BUFFER_LEN] = {0}, part[10];
@@ -41,7 +41,7 @@ int main() {
     char *arr[LINE_LEN];
 
     int count = 0;
-    
+
     //Press CTRL + D to terminate typing
     while (fgets(line, BUFFER_LEN - 1, stdin) != NULL) {
         arr[count] = buffer[count];
